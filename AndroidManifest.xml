@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="43" android:versionName="2.5.6.2" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="qrcodereader.barcodescanner.scan.qrscanner" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <queries>
+        <package android:name="voicerecorder.audiorecorder.voice"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.google.android.apps.docs.editors.docs"/>
+        <package android:name="jp.naver.line.android"/>
+        <package android:name="com.google.android.gm"/>
+        <package android:name="com.instagram.android"/>
+        <package android:name="com.facebook.orca"/>
+        <package android:name="com.twitter.android"/>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.whatsapp"/>
+        <package android:name="com.spotify.music"/>
+        <package android:name="com.paypal.android.p2pmobile"/>
+        <package android:name="com.viber.voip"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.autonavi.minimap"/>
+        <package android:name="com.baidu.BaiduMap"/>
+        <package android:name="com.tencent.map"/>
+        <package android:name="com.microsoft.office.officehubrow"/>
+        <package android:name="com.google.android.apps.docs"/>
+        <package android:name="com.facebook.katana"/>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.facebook.lite"/>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="qrcodereader.barcodescanner.scan.qrscanner.App" android:windowSoftInputMode="adjustResize" android:allowBackup="false" android:hardwareAccelerated="true" android:supportsRtl="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity android:theme="@style/AppTheme.FullScreen" android:name="qrcodereader.barcodescanner.scan.qrscanner.page.SplashActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.MainActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.scan.result.ScanResultActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.scan.ScanAlbumActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateCalendarActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateClipboardActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateContactActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateEmailActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateFacebookActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateInstagramActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateMycardActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreatePaypalActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateSmsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateSpotifyActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateTelephoneActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateTextActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateTwitterActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateViberActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateWebsiteActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateWhatsappActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateWifiActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.kind.CreateYoutubeActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.create.CreateResultActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="qrcodereader.barcodescanner.scan.qrscanner.page.setting.FeedbackActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/AppCompat.FullScreen.NoTranslucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity android:theme="@style/DebugStyle" android:name="qrcodereader.barcodescanner.scan.qrscanner.debug.DebugActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/DebugStyle" android:name="qrcodereader.barcodescanner.scan.qrscanner.debug.DebugAdActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/DebugStyle" android:name="qrcodereader.barcodescanner.scan.qrscanner.debug.DebugConfigActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/DebugStyle" android:name="qrcodereader.barcodescanner.scan.qrscanner.debug.DebugDataActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/DebugStyle" android:name="qrcodereader.barcodescanner.scan.qrscanner.debug.DebugScanLibActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/DebugStyle" android:name="qrcodereader.barcodescanner.scan.qrscanner.debug.DebugViewActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <provider android:name="qrcodereader.barcodescanner.scan.qrscanner.base.BaseFileProvider" android:exported="false" android:authorities="qrcodereader.barcodescanner.scan.qrscanner.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-4759294613008187~5233461482"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING" android:value="true"/>
+        <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="qrcodereader.barcodescanner.scan.qrscanner.mobileadsinitprovider" android:initOrder="100"/>
+        <service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="qrcodereader.barcodescanner.scan.qrscanner.androidx-startup">
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@style/policy_theme" android:name="ltd.p295sd.common.core.activity.PolicyActivity" android:screenOrientation="portrait"/>
+        <service android:name="ltd.p295sd.common.core.service.DownloadService" android:exported="false"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="qrcodereader.barcodescanner.scan.qrscanner.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.facebook.ads.AudienceNetworkActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <provider android:name="com.facebook.ads.AudienceNetworkContentProvider" android:exported="false" android:authorities="qrcodereader.barcodescanner.scan.qrscanner.AudienceNetworkContentProvider"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="5.0.0"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.android.billingclient.api.ProxyBillingActivity" android:exported="false" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>
